@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center mt-50 mb-50">
+        <div class="row">
+            <div class="col-md-12 text-right mb-3">
+                <button class="btn btn-primary" id="download"> download pdf</button>
+            </div>
+            <div class="col-md-12">
+                <div class="card" id="invoice">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="mb-4 pull-left">
+
+                                    <ul class="list list-unstyled mb-0 text-left">
+                                        <h3><img src="./images/Screenshot 2022-03-14 174720.png" alt=""> <span style="font-weight: 600;">WorldTrips</span></h3>
+                                       
+                                        <input style="font-size: 12px; font-weight: 700; margin-left: 8px;" placeholder="Date Enter" class="date-container" type="text">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mb-4 ">
+                                    <div class="text-sm-right">
+                                        <h4 class="invoice-color mb-2 mt-md-2">Scan QR</h4>
+                                        <ul class="list list-unstyled mb-0">
+                                           <img style="width: 50px; margin-right: 20px;" src="/images/download (5).png" alt="">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <h6 style="font-weight: 800;">CONFIRMATION OF</h6>
+                            <p style="font-weight: 800; font-size:12px; margin-top: -7px;">TRAVEL INSURANCE COVERAGE</p>
+                            <P style="font-weight: 600; text-align: justify; font-size: 12px;">we are pleased to confirm travel medical coverage under visitor told secure, insured by Lloyd's Syndicate 4141 and administered by WorldTrips, a member of the tokio Marine HCC Group of Companies. World trips has authority to enter into contracts of insurance on be half of the Lloyd's underwriting members of Lloyd's Syndicate 4141, which is managed by HCC underwriting agency Ltd. Lloyd's is authorised as an insurer in Spain by the Spanish insurance regulatory authority (direccion General de Segurosy Fondos de pensiones) under reference L0017</P>
+                            <p style="font-weight: 600; text-align: justify; font-size: 12px;">This coverage is valid worldwide, except for the member's Home country and countries registered by U.S economic sections and embargo programs</p>
+                        </div>
+
+                        <div style="text-align: left; margin-top: 40px; font-weight: 800; font-size:12px;">
+                            <p>Effective Date: <span><input style="text-align: left; font-weight: 800; font-size:12px;" class="date-container" placeholder="enter date" type="text"></span></p>
+                            <p style="margin-top: -20px;">Termination Date: <span><input style="text-align: left; font-weight: 800; font-size:12px;" class="date-container" placeholder="enter date" type="text"></span></p>
+                            <p style="margin-top: -20px;">Home Country: Bangladesh</p>
+                            <p style="margin-top: -20px;">Destination Country: <span><select style="border: none; font-weight: 800; font-size:12px;" id="cars">
+                                <option value="canada">Canada</option>
+                                <option value="singapur">Singapur</option>
+                                <option value="america">America</option>
+                                <option value="china" selected>China</option>
+                                <option value="japan" selected>Japan</option>
+                              </select></p>
+                        </div>
+
+
+                        <div class="input-container">
+                            <div style="float: left; margin-left: 10px;">
+                                <p style="font-weight: 800; font-size:12px; margin-bottom: -5px;">Name</p>
+                                <input style="text-align: center; width: 120px; border: none; font-weight: 800; font-size:12px;" placeholder="enter name" type="text">
+                            </div>
+                            <div style="float: left; margin-left: 10px;">
+                                <p style="font-weight: 800; font-size:12px; margin-bottom: -5px;">Policy No</p>
+                                <input style="text-align: center; width: 120px; border: none; font-weight: 800; font-size:12px;" placeholder="enter Policy" type="text" name="" id="">
+                            </div>
+                            <div style="float: left; margin-left: 10px;">
+                                <p style="font-weight: 800; font-size:12px; margin-bottom: -5px;">Date of Birth</p>
+                                <input style="text-align: center; width: 120px; border: none; font-weight: 800; font-size:12px;" placeholder="enter date of birth" type="text" name="" id="">
+                            </div>
+                            <div style="float: left; margin-left: 10px; font-weight: 800; font-size:12px;">
+                                <p style="margin-bottom: -5px;">Passport</p>
+                                <input style="text-align: center; width: 120px; border: none; font-weight: 800; font-size:12px;" placeholder="Passport No" type="text" name="" id="">
+                            </div>
+                            <div style="float: left; margin-left: 16px; font-weight: 800; font-size:12px;">
+                                <p style="margin-bottom: -5px;">Citizenship</p>
+                                <p>Bangladesh</p>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-2 text-center">
+                                <p>Name</p>
+                                <input class="date-container " placeholder="enter name" type="text">
+                            
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <p>Policy No.</p>
+                                <input class="date-container" placeholder="enter Policy No." type="text">
+                            </div>
+                            <div class="col-md-2">
+                                <p>Date of Birth</p>
+                                <input class="date-container" placeholder="enter date" type="text">
+                            </div>
+                            <div class="col-md-2">
+                                <p>Passport</p>
+                                <input text-center class="date-container" placeholder="enter passport" type="text">
+                            </div>
+                            <div class="col-md-2">
+                                <p>Citizenship</p>
+                                <p>Bangladesh</p>
+                            </div> 
+
+                        </div> -->
+
+
+
+                        <!-- <div class="d-md-flex flex-md-wrap">
+                            <div class="mb-4 mb-md-2 text-left">
+                                <ul class="list list-unstyled mb-0">
+                                    <li>
+                                        <h5 class="my-2">Name</h5>
+                                    </li>
+                                    <li><span class="font-weight-semibold"><input class="date-container" placeholder="Enter name" type="text"></span></li>
+                                </ul>
+                            </div>
+                            <div class="mb-2 ml-auto">
+                                <div class="d-flex flex-wrap wmin-md-400">
+                                    <ul class="list list-unstyled mb-0 text-left">
+                                        <li>
+                                            <h5 class="my-2">Policy No</h5>
+                                        </li>
+                                        <li>VS <input class="date-container" placeholder="enter VS no" type="text"></li>
+                                    </ul>
+                                    <ul class="list list-unstyled text-right mb-0 ml-auto">
+                                        <li>
+                                            <h5 class="font-weight-semibold my-2">Date of Birth</h5>
+                                        </li>
+                                        <li><span class="font-weight-semibold"><input class="date-container" placeholder="Enter date of birth" type="text"></span></li>
+                                    </ul>
+                                    <ul class="list list-unstyled mb-0 text-left">
+                                        <li>
+                                            <h5 class="my-2">Policy No</h5>
+                                        </li>
+                                        <li>VS <input class="date-container" placeholder="enter VS no" type="text"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="table-continer">
+                    <table>
+                        <tr>
+                          
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td style="font-weight: 800;">VisitorSecure ®
+                        </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Overall Maximum Limit 
+                        </td>
+                          <td>$130,000 (€109902.0000*)
+                        </td>
+                          <td>One Hundred Thirty Thousand US Dollars 
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>Deductible</td>
+                          <td>$50 (€42.2700*)
+                        </td>
+                          <td>Fifty US Dollar</td>
+                        </tr>
+                        <tr>
+                          <td>Medical Expenses (including hospitalization) (includes COVID‐19)  </td>
+                          <td>See Schedule of Benefits 
+                        </td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>Emergency Medical Evacuation**</td>
+                          <td>$50,000 (€42270.0000*) </td>
+                          <td>Fifty Thousand US Dollars 
+                        </td>
+                        </tr>
+                        <tr>
+                          <td>Repatriation of Remains</td>
+                          <td>$25,000 (€21135.0000*) </td>
+                          <td>Twenty‐Five Thousand US Dollars
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>Personal Liability </td>
+                            <td>$0 
+                            </td>
+                            <td>
+                          </td>
+                          </tr>
+                          <tr>
+                            <td>Paid in full by  </td>
+                            <td>AMEX
+                            </td>
+                            <td>
+                          </td>
+                          </tr>
+                      </table>
+                    </div>
+
+                    <div style="font-weight: 600; text-align: justify; font-size: 12px; margin-left: 20px; margin-top: 20px; margin-right: 20px;">
+                        This coverage is extendable for up to 364 days. VisitorSecure ® is a scheduled benefit plan. Other limitations and exclusions do apply.
+                        Please see policy documents for further details, or feel free to contact us with any questions or concerns.
+                    </div>
+        
+                    <p class="covid-align">COVID 19: Covered same as any other illness to the above mentioned medical maximum. 
+                    </p>
+                   
+                    <p style="margin-left: 20px; margin-top: -20px;">Sincerely</p>
+                    <div class="signeture-container">
+                        <img src="./images/Screenshot 2022-03-14 173639.png" alt="">
+                    </div>
+                    <p style="font-weight: 700; text-align: justify; font-size: 10px; margin-left: 20px; margin-top: -5px; margin-right: 20px;">Mark Carney WorldTrips <br/>
+                        Plan Administrator for Lloyd’s, Fitzwilliam House, 10 St. Mary Axe, London, England EC3A 8BF
+                        </p>
+                        <br/>
+                        <p style="font-weight: 700; text-align: justify; font-size: 10px; margin-left: 20px; margin-top: -20px; margin-right: 20px;">* Plan pays in US Dollars only. Amounts in Euros are provided for convenience and are based on conversion rate as of February 13, 2022 </p>
+                        <p style="font-weight: 700; text-align: justify; font-size: 10px; margin-left: 20px; margin-top: -20px; margin-right: 20px;">** Except as provided under Acute Onset of Pre‐existing Condition
+                        </p>
+                    <div class="card-footer"> <span style="font-weight: 700; text-align: justify; font-size: 10px; margin-left: 20px;" class="text-muted">WorldTrips
+                        251 North Illinois Street, Suite 600, Indianapolis, IN, 46204 USA • Tel: 317‐262‐2132 • Fax: 317‐262‐2140 • Toll Free: 800‐605‐2282 • worldtrips.com 
+                        </span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
